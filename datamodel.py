@@ -29,7 +29,7 @@ def save_representations(
         format_number(layer_idx, total_layers - 1),
         f'{format_number(example_idx, total_examples - 1)}{suffix}.dat'
     )
-    save_path.mkdir(parents=True, exist_ok=True)
+    save_path.parent.mkdir(parents=True, exist_ok=True)
     representations_np = np.memmap(save_path, mode='w+', shape=representations.shape, dtype=np.float16)
     representations_np[:] = representations.cpu().detach().numpy().astype(np.float16)
 
