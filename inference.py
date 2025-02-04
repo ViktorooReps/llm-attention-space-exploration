@@ -56,7 +56,7 @@ def get_tokenizer(model_name: str) -> PreTrainedTokenizer:
 
 
 # Tokenizer call kwargs.
-# These are passed when tokenizing text to force truncation at 64k tokens for meta-llama.
+# These are passed when tokenizing text.
 TOKENIZER_CALL_KWARGS = {
     "meta-llama/Llama-3.1-8B": {
          "truncation": True,
