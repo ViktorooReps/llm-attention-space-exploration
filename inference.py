@@ -60,7 +60,7 @@ def get_tokenizer(model_name: str) -> PreTrainedTokenizer:
 TOKENIZER_CALL_KWARGS = {
     "meta-llama/Llama-3.1-8B": {
          "truncation": True,
-         "max_length": 64000
+         "max_length": 128000
     }
 }
 
